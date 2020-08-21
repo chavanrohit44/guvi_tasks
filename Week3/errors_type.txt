@@ -1,0 +1,80 @@
+** Uncaught TypeError: Cannot read property
+    The TypeError object represents an error when a value is not of the expected type.
+    Uncaught means that the error was not caught in the catch part of the try-catch block.
+    Eg :- 
+        let val = null;
+        val.bar = 20;   
+		
+        err- Uncaught TypeError: cannot set property ‘bar’ of undefined
+
+** TypeError :- undefined is not an object
+    This is an error that occurs when you read a property or call a method on an undefined object. 
+    
+   Note:in JavaScript, null and undefined are not the same, which is why we see two different error messages.
+    Undefined is usually a variable that has not been assigned, while null means the value is blank.
+    Eg :- data=undefined
+          if(data.length===0){                 //error occur here
+            console.log("data is empty")
+          }
+
+** TypeError :- null is not an object
+    This is an error that occurs when you read a property or call a method on an null object. 
+    Note:in JavaScript, null and undefined are not the same, which is why we see two different error messages.
+    Undefined is usually a variable that has not been assigned, while null means the value is blank.
+    Eg :- data=null
+          if(data.length===0){                 //error occur here
+            console.log("data is empty")
+          }
+
+** ScriptError :- 
+    "Script Error" happens when an uncaught JavaScript error crosses domain boundaries in violation of the cross-origin policy. 
+    For example, if you host your JavaScript code on a CDN, any uncaught errors 
+    (errors that bubble up to the window.onerror handler, instead of being caught in try-catch) 
+    will get reported as simply "Script error" instead of containing useful information. 
+    This is a browser security measure intended to prevent passing data across domains that otherwise wouldn't be allowed to communicate. 
+    It's implemented in Firefox and Chrome.
+	
+** TypeError :- Object dosen't support
+   This is an error that occurs in IE when you call an undefined method. 
+   Note :- In chrome and Firefox it shows as Uncaught TypeError: test_obj.isAwe is not a function
+   Eg :- test_obj={'a':1,'b':2}
+         test_obj.isAwe()
+		 
+** TypeError :- undefined is not a function
+   This is an error that occurs in Chrome and Firefox when you call an undefined function.
+   Note :- It is the same error as Object dosen't support in IE
+   Eg :- test_obj={'a':1,'b':2}
+         test_obj.isAwe()
+
+** Uncaught range error :-
+   This is an error that occurs under a couple of circumstances. 
+   One is when you call a recursive function that does not terminate
+   Another is if you pass a value to a function that is out of range.
+   Eg1 :-
+        var a = new Array(4294967295);  //OK
+        var b = new Array(-1); //range error
+
+        var num = 2.555555;
+        document.writeln(num.toExponential(4));  //OK
+        document.writeln(num.toExponential(-2)); //range error!
+		 
+** TypeError :- Cannot read property length
+   This is an error that occurs in Chrome & Firefox because of reading length property 
+   for an undefined or null variable.
+   Eg :- null.length
+ 
+** Uncaught type error :- Cannot set property
+   When we try to access an undefined variable it always returns undefined and 
+   we cannot get or set any property of undefined. In that case, an application 
+   will throw this error.
+   Eg :-var val = undefined
+        val.value=0
+
+** ReferenceError:- event is not defined
+    This error is thrown when you try to access a variable that is undefined or 
+	is outside the current scope.
+	Eg :-function abcd()
+	     {
+		   var test
+		 }
+		console.log(abcd)

@@ -1,0 +1,18 @@
+******** Window ********
+
+1. Window is basically the top most object of the browser (i.e its the entire browser window)
+2. Window is the first thing which gets loaded into the browser which acts as the global object
+3. It holds all the properties like window.screen, window.document, window.location
+
+
+******** Document ********
+
+1. Document is basically that part of browser which get loaded/rendered after the window
+2. Any web page loaded in browser and represent entry point into web page content
+3. For e.g - when html doc(.html) is loaded in web browser, it becomes the document object
+4. Document actually get loaded inside the window object
+
+******** Screen ********
+
+1. Screen is basically a small object which represents the physical dimensions of screen.
+2. It can be used to display the width, height of screen (i.e User's display information)
